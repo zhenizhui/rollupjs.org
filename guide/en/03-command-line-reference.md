@@ -72,25 +72,25 @@ $ rollup --config my.config.js
 ### 命令行的参数
 
 Many options have command line equivalents. Any arguments passed here will override the config file, if you're using one. See the [big list of options](#big-list-of-options) for details.
-配置文件中的许多选项和命令行的参数是等价的。如果你使用这里的参数，那么将重写配置文件。想了解更多的话，仔细查阅这个[包办大量选项的清单](#big-list-of-options)
+配置文件中的许多选项和命令行的参数是等价的。如果你使用这里的参数，那么将重写配置文件中对应的参数。想了解更多的话，仔细查阅这个[包办大量选项的清单](#big-list-of-options)
 
 ```bash
 -i, --input                 要打包的文件（必须）
 -o, --output.file           输出的文件 (如果没有这个参数，则直接输出到控制台)
 -f, --output.format [es]    输出的文件类型 (amd, cjs, es, iife, umd)
--e, --external              Comma-separate list of module IDs to exclude
--g, --globals               Comma-separate list of `module ID:Global` pairs
-                              Any module IDs defined here are added to external
+-e, --external              将模块ID的逗号分隔列表排除
+-g, --globals               以`module ID:Global` 键值对的形式，用逗号分隔开 
+                              任何定义在这里模块ID定义添加到外部依赖
 -n, --name                  生成UMD模块的名字
 -m, --sourcemap             生成 sourcemap (`-m inline` for inline map)
 --amd.id                    AMD模块的ID，默认是个匿名函数
 --amd.define                使用Function来代替`define`
 --no-strict                 在生成的包中省略`"use strict";`
 --no-conflict               对于UMD模块来说，给全局变量生成一个无冲突的方法
---intro                     Content to insert at top of bundle (inside wrapper)
---outro                     Content to insert at end of bundle (inside wrapper)
---banner                    Content to insert at top of bundle (outside wrapper)
---footer                    Content to insert at end of bundle (outside wrapper)
+--intro                     在打包好的文件的块的内部的最顶部插入一段内容
+--outro                     在打包好的文件的块的内部的最底部插入一段内容
+--banner                    在打包好的文件的块的外部的最顶部插入一段内容
+--footer                    在打包好的文件的块的外部的最底部插入一段内容
 --interop                   包含公共的模块（这个选项是默认添加的）
 ```
 
